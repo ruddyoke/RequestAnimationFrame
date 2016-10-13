@@ -1,0 +1,16 @@
+ping_interval = 6000; //millisecondes
+ping_time = buddyflag.ping_interval;
+    
+ping = function()
+{
+    if(buddyflag.ping_time > 0){
+        buddyflag.ping_time -= 16;
+    }else{
+        refreshAllMsg();
+        pingTonew();
+        buddyflag.ping_time = buddyflag.ping_interval;
+    }
+
+    window.requestAnimationFrame(ping);
+}
+window.requestAnimationFrame(ping);
