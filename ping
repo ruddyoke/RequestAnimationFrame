@@ -6,8 +6,9 @@ ping = function()
     if(buddyflag.ping_time > 0){
         buddyflag.ping_time -= 16;
     }else{
-        refreshAllMsg();
-        pingTonew();
+        /* ************* */
+        // code
+        /* ************* */
         buddyflag.ping_time = buddyflag.ping_interval;
     }
 
