@@ -1,15 +1,15 @@
 ping_interval = 6000; //millisecondes
-ping_time = buddyflag.ping_interval;
+ping_time = app.ping_interval;
     
 ping = function()
 {
-    if(buddyflag.ping_time > 0){
-        buddyflag.ping_time -= 16;
+    if(app.ping_time > 0){
+        app.ping_time -= 16;
     }else{
         /* ************* */
         // code
         /* ************* */
-        buddyflag.ping_time = buddyflag.ping_interval;
+        app.ping_time = buddyflag.ping_interval;
     }
 
     window.requestAnimationFrame(ping);
